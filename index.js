@@ -1,8 +1,10 @@
-const country = 'India'
-const continent = 'Asia'
-population = 1400000000
+function percentageOfWorld1(country,population) {
+    percentage = (population/7900)* 100
+}
 
-const isIsland = 'false'
-const language = 'telugu'
+function describePopulation(country,population) {
+    percentageOfWorld1(country,population)
+    console.log(`${country} has a ${population} million people, so it's about ${percentage}% of the world population`)
+}
 
-console.log(`${country}'s population is ${population > 33000000 ? 'above' : 'below'} average`)
+China = describePopulation('China',1441)
