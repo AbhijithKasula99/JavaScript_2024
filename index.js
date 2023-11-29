@@ -1,10 +1,27 @@
-function percentageOfWorld1(country,population) {
-    percentage = (population/7900)* 100
-}
+// Neighbors array
+neighbors = ['Pakistan', 'Nepal', 'Bhutan'];
+console.log(neighbors)
 
-function describePopulation(country,population) {
-    percentageOfWorld1(country,population)
-    console.log(`${country} has a ${population} million people, so it's about ${percentage}% of the world population`)
-}
+// Adding Utopia to array
+neighbors.push('Utopia');
+console.log(neighbors)
 
-China = describePopulation('China',1441)
+// Removing Utopia from the array
+neighbors.pop('Utopia')
+console.log(neighbors)
+
+// Checking if Germany is in the array
+if (neighbors.includes("Germany")) {
+    console.log("European Country")
+}
+else {
+    console.log("Probably not a European Country")
+}    
+
+// Replacing a country with Sweden in the array
+neighbors.splice(0,1,'Sweden')
+console.log(neighbors)
+
+// Replacing Sweden with Republic of Sweden
+neighbors[neighbors.indexOf('Sweden')] = 'Republic of Sweden'
+console.log(neighbors);
