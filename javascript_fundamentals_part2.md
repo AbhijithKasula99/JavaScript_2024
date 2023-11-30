@@ -106,3 +106,44 @@ console.log(neighbors)
 neighbors[neighbors.indexOf('Sweden')] = 'Republic of Sweden'
 console.log(neighbors);
 ```
+
+## Introduction to Objects
+
+```
+const myCountry = {
+    country: 'India',
+    capital: 'Delhi',
+    language: 'telugu',
+    population: 1400,
+    neighbors: ['Pakistan','Bangladesh','Nepal','Bhutan']
+}
+```
+
+## Dot vs Bracket Notation
+
+```
+const myCountry = {
+    country: 'India',
+    capital: 'Delhi',
+    language: 'telugu',
+    population: 1400,
+    neighbors: ['Pakistan','Bangladesh','Nepal','Bhutan'],
+    output: function() {
+        return(`${this.country} has ${this.population} million ${this.language} speaking people, ${this.neighbors.length} neighboring countries and a capital called ${this.capital}.`)
+    }
+}
+
+console.log(myCountry.output())
+```
+
+```
+// Dot Notation
+myCountry.population += 200;
+console.log(myCountry.population)
+```
+
+```
+// Bracket Notation
+myCountry["population"] -= 200;
+console.log(myCountry.population)
+```
