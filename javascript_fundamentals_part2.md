@@ -147,3 +147,64 @@ console.log(myCountry.population)
 myCountry["population"] -= 200;
 console.log(myCountry.population)
 ```
+
+## For Loop
+
+```
+for (let i=0; i<=50; i++) {
+    console.log(`Voter ${i} is currently voting!`)
+}
+```
+
+## Looping Arrays, Breaking and Continuing
+
+```
+let populations = [1428,1425,339,277];
+let percentages2 = [];
+
+// Percentage Function
+function percentageOfWorld1(population) {
+    percentage = (population/7900)* 100
+    return percentage
+}
+
+for (let i=0; i<populations.length; i++) {
+    percentages2.push(percentageOfWorld1(populations[i]))
+}
+
+console.log(percentages2)
+```
+
+## Looping Backwards and Loops in Loops
+
+```
+let listOfNeighbours = [
+    ['Canada', 'Mexico'],
+    ['Spain'],
+    ['Norway', 'Sweden','Russia']];
+
+for (let i=0; i<listOfNeighbours.length; i++)
+    for (let y=0; y<listOfNeighbours[i].length; y++)
+        console.log(`Neighbour: ${listOfNeighbours[i][y]}`)
+```
+
+## The While Loop
+
+```
+let populations = [1428,1425,339,277];
+let percentages3 = [];
+
+// Percentage Function
+function percentageOfWorld1(population) {
+    percentage = (population/7900)* 100
+    return percentage
+}
+
+i=0
+while(i <populations.length) {
+    percentages3.push(percentageOfWorld1(populations[i]));
+    i++;
+}
+
+console.log(percentages3)
+```
