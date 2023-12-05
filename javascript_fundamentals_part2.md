@@ -208,3 +208,29 @@ while(i <populations.length) {
 
 console.log(percentages3)
 ```
+
+## Think like a Developer
+
+![Alt text](image.png)
+
+## Debugging Coding Challenge
+
+```
+// 1. Array is given
+// 2. A function takes the array
+// 3. the function performs the operation we ask it to do until each element in an array
+
+// Write the Function
+const printForecast = function(arr) {
+    let str = '';
+    for(let i=0; i<arr.length; i++) {
+        str = str + ` ${arr[i]} in ${i + 1} days ... `
+        //str += ` ${arr[i]} in ${i + 1} days ... ` Alternative
+    }
+    console.log('...' + str);
+    return 'completed';
+}
+
+console.log(printForecast([17, 21, 23]));
+console.log(printForecast([12, 5, -5, 0, 4]));
+```
