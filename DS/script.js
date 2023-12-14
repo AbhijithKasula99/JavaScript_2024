@@ -11,7 +11,6 @@ const restaurant = {
   categories: ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'],
   starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
   mainMenu: ['Pizza', 'Pasta', 'Risotto'],
-
   openingHours: {
     thu: {
       open: 12,
@@ -26,9 +25,18 @@ const restaurant = {
       close: 24,
     },
   },
+  order : function (starterIndex, mainIndex) {
+    return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
+  }
 };
 
-// Destructuring Arrays
+// Destructuring Objects
+
+
+
+
+
+/* // Destructuring Arrays
 const arr = [2,3,4];
 const a = arr[0];
 const b = arr[1];
@@ -59,3 +67,19 @@ console.log(m1, m2); // We can see they are swapped now
 // Swapping through destructuring
 [m2, m1] = [m1, m2];
 console.log(m1, m2); // We swapped it back!
+
+// We just created an order function to place an order, 1 main dish and a starter
+console.log(restaurant.order(2,0)); // ordered pizza and garlic bread
+
+// We can destructure it by 
+const [starter, mainCourse] = restaurant.order(2,0)
+console.log(starter, mainCourse);
+
+// Destructuring nested arrays
+const nested = [[1,2,3],[4,5,6],[7,8,9],10];
+const [[a1, b1, c1], [d1, e1, f1], [g1, h1, i1], j1] = nested
+console.log(a1,b1,c1,d1,e1,f1,g1,h1,i1,j1);
+
+// Working with default values
+const [k1=2, l1=2, n1=2] = [2,7];
+console.log(k1,l1,n1); */
